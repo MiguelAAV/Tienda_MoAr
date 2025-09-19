@@ -344,4 +344,15 @@ footer {
         flex: 100%;
     }
 
+/* Estilos para el contenedor de inicio de sesión */
+    .login-container {
+        margin-top: 50px;
+        text-align: right;
+    }
+    
+    
+    .login-nav a {
+        margin-left: 15px;
+    }
+
 }
