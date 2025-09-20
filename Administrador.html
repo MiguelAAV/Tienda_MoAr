@@ -4,32 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrador</title>
-    <!-- Llamada al archivo CSS externo -->
     <link rel="stylesheet" href="css/admin.css">
 </head>
 <body>
     <div class="layout">
         <!-- Menú vertical -->
-         
         <aside class="sidebar">
-        <h2>Menú</h2>
-        <nav>
-            <ul>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Usuarios</a></li>
-            <li><a href="#">Configuración</a></li>
-            </ul>
-        </nav>
+            <h2>Menú</h2>
+            <nav>
+                <ul>
+                    <li><button onclick="abrirJFrameProductos()">Productos</button></li>
+                    <li><button onclick="abrirJFrameUsuarios()">Usuarios</button></li>
+                    <li><a href="#">Configuración</a></li>
+                </ul>
+            </nav>
         </aside>
 
         <!-- Contenido principal -->
         <main class="content">
-        <h1>Hola Administrador</h1>
-        <h2>Bienvenido al panel de administración</h2>
-        <h3>¿Qué deseas hacer hoy?</h3>
-        <p>Desde aquí puedes gestionar productos, usuarios y configuraciones del sistema.</p>
+            <h1>Hola Administrador</h1>
+            <p>Desde aquí puedes gestionar productos, usuarios y configuraciones del sistema.</p>
         </main>
-
     </div>
+
+    <!-- Ventana tipo JFrame -->
+    <div id="jframe" class="jframe">
+        <div class="jframe-header">
+            <span id="jframeTitle">Título</span>
+            <button id="closeBtn">&times;</button>
+        </div>
+        <div class="jframe-body" id="jframeBody">
+            <!-- Contenido dinámico -->
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
 </body>
 </html>
