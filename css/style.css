@@ -77,12 +77,11 @@ nav ul li a:hover {
     padding: 10px 20px;
     text-decoration: none;
     color: #1721A9;
-   
 }
 
 /*.menucelulares a:hover {
     background-color: #ddd;
-}
+}*/
 
 /* Ocultar submenús por defecto */
 .submenucelulares, .submenucelulares-nivel2 {
@@ -180,11 +179,11 @@ nav ul li a:hover {
 }
 
 .producto button {
-  background-color: #DE8F18;  /* color de fondo */
+  background-color: #1721A9;  /* color de fondo */
   color: #fff;                /* texto en blanco */
   border: none;               /* quita el borde por defecto */
   padding: 10px 15px;         /* espacio interno */
-  border-radius: 5px;         /* bordes redondeados */
+  border-radius: 10px;         /* bordes redondeados */
   cursor: pointer;            /* cambia el cursor al pasar el mouse */
   font-weight: bold;
 }
@@ -203,7 +202,7 @@ nav ul li a:hover {
     position: absolute;
     top: -8px;
     right: -8px;
-    background-color: #DE8F18;
+    background-color: #1721A9;
     color: white;
     border-radius: 50%;
     width: 18px;
@@ -226,6 +225,10 @@ footer {
     background-color: #333333;
     color: white;
     padding: 40px 5%;
+}
+
+.nosotros p{
+    margin-bottom: 15px; /* espacio de 15px entre párrafos */
 }
 
 .footer-container {

@@ -1,0 +1,130 @@
+
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Encabezado */
+header {
+    text-align: center; /* centra todo dentro del header */
+    padding: 20px 0;
+}
+
+
+img {
+    max-width: 150px; /* tamaño adecuado del logo */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto; /* centrado con margen inferior */
+
+}
+
+
+h1 {
+    margin-top: 20px; /* espacio con el menú */
+    text-align: center;
+    margin-bottom: 30px; /* espacio con el logo */
+    color: #1721A9;
+}
+
+/* Sección productos */
+.productos-apple {
+    padding: 1px;
+    text-align: center;
+}
+
+
+
+.productos-apple h2 {
+    margin-top: 30px;  /* espacio con el catálogo */
+    margin-bottom: 20px;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #1721A9;
+}
+
+/* Grid de productos */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px; /* espacio entre productos */
+}
+
+.producto {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Separación precio-botón */
+.producto p:last-of-type {
+    margin-bottom: 10px; /* espacio entre precio y botón */
+    font-weight: bold;
+}
+
+/* Botón */
+.producto button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+/* Responsive */
+@media (max-width: 900px) {
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 productos por fila */
+    }
+}
+
+@media (max-width: 600px) {
+    .productos-grid {
+        grid-template-columns: 1fr; /* 1 producto por fila */
+    }
+}
