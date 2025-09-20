@@ -1,0 +1,98 @@
+
+/* ===== Contacto ===== */
+.contact-info {
+    max-width: 600px;
+    margin: 50px auto; /* Centra la sección */
+    padding: 30px;
+    background-color: #f8fbff; /* azul muy suave */
+    border: 2px solid #1721A9; /* azul corporativo */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-info h2 {
+    color: #1721A9;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 15px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-info ul li {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #000;
+}
+
+.contact-info ul li i {
+    color: #1721A9;
+    margin-right: 8px;
+}
+
+/* Imagen corporativa */
+.contact-info img {
+    width: 120px;
+    height: auto;
+    margin: 20px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Formulario */
+.contact-info form {
+    text-align: left;
+}
+
+.contact-info label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    color: #1721A9;
+}
+
+.contact-info input,
+.contact-info textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.contact-info textarea {
+    resize: vertical;
+    min-height: 100px;
+    max-height: 250px;
+}
+
+/* Botón */
+.contact-info button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #1721A9;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-info button:hover {
+    background-color: #1721A9;
+}

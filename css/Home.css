@@ -120,15 +120,14 @@ nav ul li a:hover {
   width: 600;           /* ancho del carrusel */
   height: 400px;          /* alto del carrusel */
   overflow: hidden;       /* oculta lo que se sale del contenedor */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .carrusel-contenedor {
   display: flex;          /* coloca las imágenes en fila */
   width: 300%;            /* 3 imágenes → 300% */
   animation: mover 20s infinite; /* animación automática */
-  
 }
 
 .carrusel img {
@@ -139,15 +138,15 @@ nav ul li a:hover {
 
 /* Animación de movimiento */
 @keyframes mover {
-  0%   { transform: translateX(0); }
-  33%  { transform: translateX(-600px); }
-  66%  { transform: translateX(-1200px); }
-  100% { transform: translateX(0); }
+    0%   { transform: translateX(0); }
+    33%  { transform: translateX(-600px); }
+    66%  { transform: translateX(-1200px); }
+    100% { transform: translateX(0); }
 }
 
 .productos-destacados {
-  text-align: center;
-  margin: 20px;
+    text-align: center;
+    margin: 20px;
 }
 
 .productos-grid {
@@ -158,24 +157,23 @@ nav ul li a:hover {
 }
 
 .producto {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  width: 250px;               /* ancho fijo para cada tarjeta */
-  text-align: center;
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-
-  display: flex;             /* usamos flexbox */
-  flex-direction: column;    /* elementos en columna */
-  justify-content: space-between; /* reparte espacio: botón abajo */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;                   /* ancho fijo para cada tarjeta */
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;                  /* usamos flexbox */
+    flex-direction: column;         /* elementos en columna */
+    justify-content: space-between; /* reparte espacio: botón abajo */
 }
 
 .producto img {
   width: 200px;               /* todas las imágenes tendrán el mismo ancho */
   height: 200px;              /* todas las imágenes tendrán la misma altura */
   object-fit: cover;          /* recorta la imagen para que encaje */
-  border-radius: 8px;
+    border-radius: 8px;
 }
 
 .producto button {
@@ -357,5 +355,6 @@ footer {
     .login-nav a {
         margin-left: 15px;
     }
+    
 
 }

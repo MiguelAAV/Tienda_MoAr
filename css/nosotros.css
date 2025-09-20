@@ -1,0 +1,19 @@
+.imagen-nosotros {
+    display: flex;
+    justify-content: center; /* centra horizontal */
+    align-items: center;     /* centra vertical si tiene altura definida */
+    margin: 20px 0;
+}
+
+.imagen-nosotros img {
+    max-width: 100%;  /* evita que se deforme */
+    height: auto;
+    border-radius: 10px; /* opcional, por estética */
+}
+
+.imagen-nosotros img {
+    width: 400px;   /* ajusta el valor a tu gusto */
+    height: auto;   /* mantiene la proporción */
+    border-radius: 10px; /* opcional */
+}
+

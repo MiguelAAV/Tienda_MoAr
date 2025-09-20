@@ -28,14 +28,6 @@ img {
 
 }
 
-
-h1 {
-    margin-top: 20px; /* espacio con el menú */
-    text-align: center;
-    margin-bottom: 30px; /* espacio con el logo */
-    color: #1721A9;
-}
-
 /* Sección productos */
 .productos_catalogo {
     padding: 1px;
