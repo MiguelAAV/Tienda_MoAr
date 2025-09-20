@@ -6,9 +6,33 @@ let productos = [
 ];
 
 let usuarios = [
-    { nombre: "Juan Perez", rol: "Administrador", correo: "juan@mail.com" },
-    { nombre: "Maria Gomez", rol: "Usuario", correo: "maria@mail.com" },
-    { nombre: "Carlos Soto", rol: "Usuario", correo: "carlos@mail.com" }
+    {
+        fechaIngreso: "2023-01-15",
+        nombreCompleto: "Juan Perez",
+        correo: "juan@mail.com",
+        contrasena: "123456",
+        telefono: "912345678",
+        region: "Metropolitana",
+        comuna: "Santiago"
+    },
+    {
+        fechaIngreso: "2023-02-20",
+        nombreCompleto: "Maria Gomez",
+        correo: "maria@mail.com",
+        contrasena: "abcdef",
+        telefono: "",
+        region: "Valparaíso",
+        comuna: "Viña del Mar"
+    },
+    {
+        fechaIngreso: "2023-03-10",
+        nombreCompleto: "Carlos Ruiz",
+        correo: "carlos@mail.com",
+        contrasena: "123456",
+        telefono: "987654321",
+        region: "Metropolitana",
+        comuna: "Santiago"
+    }
 ];
 
 const jframe = document.getElementById('jframe');
@@ -24,26 +48,30 @@ function formatearPrecio(valor) {
 // ---------- PRODUCTOS ---------- //
 function abrirJFrameProductos() {
     jframeTitle.innerText = "Productos";
-    jframeBody.innerHTML = "";
+    jframeBody.innerHTML = ""; // Limpiar contenido
 
-    const form = document.createElement('div');
-    form.className = "product-form";
-    form.innerHTML = `
-        <input type="text" id="productoNombre" placeholder="Nombre">
-        <input type="text" id="productoDescripcion" placeholder="Descripción">
-        <input type="number" id="productoPrecio" placeholder="Precio">
-        <button class="add">Agregar Producto</button>
-    `;
-    jframeBody.appendChild(form);
-    form.querySelector(".add").addEventListener("click", agregarProducto);
+    // Crear botón "Agregar Producto" solo si no existe
+    if (!document.getElementById('btnAgregarProducto')) {
+        const botonAgregarProducto = document.createElement('button');
+        botonAgregarProducto.id = "btnAgregarProducto";
+        botonAgregarProducto.innerText = "Agregar Producto";
+        botonAgregarProducto.style.marginBottom = "15px";
+        botonAgregarProducto.style.backgroundColor = "#28a745";
+        botonAgregarProducto.style.color = "white";
+        botonAgregarProducto.style.border = "none";
+        botonAgregarProducto.style.padding = "8px 12px";
+        botonAgregarProducto.style.borderRadius = "4px";
+        botonAgregarProducto.style.cursor = "pointer";
+        botonAgregarProducto.onclick = () => window.open("agregar_producto.html", "_blank");
+        jframeBody.appendChild(botonAgregarProducto);
+    }
 
     mostrarProductos();
     jframe.style.display = "block";
 }
 
 function mostrarProductos() {
-    const existentes = jframeBody.querySelectorAll('.product-card');
-    existentes.forEach(e => e.remove());
+    jframeBody.querySelectorAll('.product-card').forEach(e => e.remove());
 
     productos.forEach((prod, index) => {
         const div = document.createElement('div');
@@ -68,23 +96,6 @@ function mostrarProductos() {
     });
 }
 
-function agregarProducto() {
-    const nombre = document.getElementById('productoNombre').value.trim();
-    const descripcion = document.getElementById('productoDescripcion').value.trim();
-    const precio = parseFloat(document.getElementById('productoPrecio').value.trim());
-
-    if(!nombre || !descripcion || isNaN(precio) || precio <=0) {
-        alert("Todos los campos son obligatorios y el precio debe ser mayor a 0.");
-        return;
-    }
-
-    productos.push({nombre, descripcion, precio});
-    document.getElementById('productoNombre').value = "";
-    document.getElementById('productoDescripcion').value = "";
-    document.getElementById('productoPrecio').value = "";
-    mostrarProductos();
-}
-
 function modificarProducto(index) {
     const prod = productos[index];
     const nombre = prompt("Nombre:", prod.nombre);
@@ -96,48 +107,56 @@ function modificarProducto(index) {
         alert("Precio inválido");
         return;
     }
-    productos[index] = {nombre, descripcion, precio};
+    productos[index] = { nombre, descripcion, precio };
     mostrarProductos();
 }
 
 // ---------- USUARIOS ---------- //
 function abrirJFrameUsuarios() {
     jframeTitle.innerText = "Usuarios";
-    jframeBody.innerHTML = "";
+    jframeBody.innerHTML = ""; // Limpiar contenido
 
-    const form = document.createElement('div');
-    form.className = "user-form";
-    form.innerHTML = `
-        <input type="text" id="nombre" placeholder="Nombre">
-        <input type="text" id="rol" placeholder="Rol">
-        <input type="email" id="correo" placeholder="Correo">
-        <button class="add">Agregar Usuario</button>
-    `;
-    jframeBody.appendChild(form);
-    form.querySelector(".add").addEventListener("click", agregarUsuario);
+    // Crear botón "Agregar Usuario" solo si no existe
+    if (!document.getElementById('btnAgregarUsuario')) {
+        const botonAgregarUsuario = document.createElement('button');
+        botonAgregarUsuario.id = "btnAgregarUsuario";
+        botonAgregarUsuario.innerText = "Agregar Usuario";
+        botonAgregarUsuario.style.marginBottom = "15px";
+        botonAgregarUsuario.style.backgroundColor = "#007bff";
+        botonAgregarUsuario.style.color = "white";
+        botonAgregarUsuario.style.border = "none";
+        botonAgregarUsuario.style.padding = "8px 12px";
+        botonAgregarUsuario.style.borderRadius = "4px";
+        botonAgregarUsuario.style.cursor = "pointer";
+        botonAgregarUsuario.onclick = () => window.open("AgregarUsuario.html", "_blank");
+        jframeBody.appendChild(botonAgregarUsuario);
+    }
 
     mostrarUsuarios();
     jframe.style.display = "block";
 }
 
 function mostrarUsuarios() {
-    const existentes = jframeBody.querySelectorAll('.product-card');
-    existentes.forEach(e => e.remove());
+    jframeBody.querySelectorAll('.product-card').forEach(e => e.remove());
 
     usuarios.forEach((user,index)=>{
         const div = document.createElement('div');
         div.className = "product-card";
         div.innerHTML = `
-            <p><strong>Nombre:</strong> ${user.nombre}</p>
-            <p><strong>Rol:</strong> ${user.rol}</p>
+            <p><strong>Fecha Ingreso:</strong> ${user.fechaIngreso}</p>
+            <p><strong>Nombre Completo:</strong> ${user.nombreCompleto}</p>
             <p><strong>Correo:</strong> ${user.correo}</p>
+            <p><strong>Contraseña:</strong> ${user.contrasena}</p>
+            <p><strong>Teléfono:</strong> ${user.telefono || '-'}</p>
+            <p><strong>Región:</strong> ${user.region}</p>
+            <p><strong>Comuna:</strong> ${user.comuna}</p>
             <button class="update">Modificar</button>
             <button class="delete">Eliminar</button>
         `;
         jframeBody.appendChild(div);
 
         div.querySelector('.delete').addEventListener('click', () => {
-            if(confirm(`¿Eliminar usuario ${user.nombre}?`)){
+            if(confirm(`¿Eliminar usuario ${user.nombreCompleto}?`)){
                 usuarios.splice(index,1);
                 mostrarUsuarios();
             }
@@ -147,42 +166,27 @@ function mostrarUsuarios() {
     });
 }
 
-function agregarUsuario() {
-    const nombre = document.getElementById('nombre').value.trim();
-    const rol = document.getElementById('rol').value.trim();
-    const correo = document.getElementById('correo').value.trim();
-
-    if(!nombre || !rol || !correo){
-        alert("Todos los campos son obligatorios.");
-        return;
-    }
-
-    const correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if(!correoRegex.test(correo)){
-        alert("Correo inválido.");
-        return;
-    }
-
-    usuarios.push({nombre,rol,correo});
-    document.getElementById('nombre').value="";
-    document.getElementById('rol').value="";
-    document.getElementById('correo').value="";
-    mostrarUsuarios();
-}
-
 function modificarUsuario(index){
     const user = usuarios[index];
-    const nombre = prompt("Nombre:", user.nombre);
-    if(!nombre) return;
-    const rol = prompt("Rol:", user.rol);
-    if(!rol) return;
+    const fechaIngreso = prompt("Fecha de ingreso (YYYY-MM-DD):", user.fechaIngreso);
+    if(!fechaIngreso) return;
+    const nombreCompleto = prompt("Nombre completo:", user.nombreCompleto);
+    if(!nombreCompleto) return;
     const correo = prompt("Correo:", user.correo);
+    const contrasena = prompt("Contraseña:", user.contrasena);
+    const telefono = prompt("Teléfono (opcional):", user.telefono);
+    const region = prompt("Región:", user.region);
+    const comuna = prompt("Comuna:", user.comuna);
+
     const correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if(!correoRegex.test(correo)){
-        alert("Correo inválido.");
+    if(!correoRegex.test(correo)) {
+        alert("Correo inválido");
         return;
     }
-    usuarios[index] = {nombre,rol,correo};
+
+    usuarios[index] = {
+        fechaIngreso, nombreCompleto, correo, contrasena, telefono, region, comuna
+    };
     mostrarUsuarios();
 }
 
