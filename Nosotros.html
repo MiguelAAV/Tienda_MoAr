@@ -5,29 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="header-container">
             <a href="#" class="logo">Mo<span>Ar</span></a>
-            <nav class="menu">
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav class="menucelulares">
                 <ul>
                     <li><a href="Home.html">Home</a></li>
-                    <li><a href="celulares.html">Celulares</a></li>
+                    <li><a href="#">Celulares</a>
+                        <ul class="submenucelulares">
+                            <li><a href="Apple.html">Apple</a></li>
+                            <li><a href="samsung.html">Samsung</a></li>
+                            <li><a href="xiaomi.html">Xiaomi</a></li>
+                            <li><a href="Motorola.html">Motorola</a></li>
+                            <li><a href="honor.html">Honor</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">Accesorios</a></li>
                     <li><a href="Nosotros.html">Nosotros</a></li>
                     <li><a href="#">Blogs</a></li>
                     <li><a href="#">Contacto</a></li>
                 </ul>
             </nav>
+            
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
         </div>
     </header>
 
     <main>
         <section class="nosotros">
             <h2>Sobre Nosotros</h2>
+            <br>
             <br>
             <p>Bienvenido a MoAr, tu tienda en línea de confianza para productos electrónicos de alta calidad. Nos apasiona ofrecerte lo mejor en tecnología y accesorios.</p>
             <p><b>En MoAr</b>, nos esforzamos por brindarte una experiencia de compra excepcional, con un catálogo cuidadosamente seleccionado y un servicio al cliente dedicado.

@@ -13,6 +13,12 @@ header {
     padding: 20px 0;
 }
 
+.container2 img {
+    max-width: 800px; /* tamaño adecuado del logo */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto; /* centrado con margen inferior */
+}
 
 img {
     max-width: 150px; /* tamaño adecuado del logo */
@@ -31,14 +37,14 @@ h1 {
 }
 
 /* Sección productos */
-.productos-apple {
+.productos_catalogo {
     padding: 1px;
     text-align: center;
 }
 
 
 
-.productos-apple h2 {
+.productos_catalogo h2 {
     margin-top: 30px;  /* espacio con el catálogo */
     margin-bottom: 20px;
 }
@@ -78,13 +84,13 @@ header {
 }
 
 /* Grid de productos */
-.productos-grid {
+.productos-grid_2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas */
     gap: 20px; /* espacio entre productos */
 }
 
-.producto {
+.producto_marcas {
     border: 1px solid #ddd;
     padding: 15px;
     border-radius: 10px;
@@ -104,10 +110,10 @@ header {
 }
 
 /* Botón */
-.producto button {
+.producto_marcas button {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #007aff;
+    background-color: #1721A9;
     color: white;
     border: none;
     border-radius: 5px;
