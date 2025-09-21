@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoAr</title>
-    <!-- Llamada al archivo CSS externo -->
-    <link rel="stylesheet" href="css/Home.css">
-    <link rel="stylesheet" href="css/Modal.css">
-    
-    <!-- Iconos (usando Font Awesome) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Descripción del producto</title>
+<link rel="stylesheet" href="css/productos.css">
+<link rel="stylesheet" href="css/Home.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/descripcion_producto.css">
+<link rel="stylesheet" href="css/Modal.css">
+
 </head>
 <body>
-    <!-- HEADER -->
-    <header>
+
+<!-- HEADER -->
+<header>
         <div class="header-container">
             <a href="#" class="logo">Mo<span>Ar</span></a>
             <div class="menu-toggle" id="mobile-menu">
@@ -47,7 +48,7 @@
             </div>
             <!-- Fin carrito de compras -->
         </div>
-    </header>
+</header>
 
 <!-- Inicio Modal de Login -->
     <div id="loginModal" class="modal">
@@ -69,27 +70,14 @@
     <!-- Modal de Login Fin-->
 
 
-    <!-- MAIN CONTENT -->
-        <div class="carrusel">
-            <div class="carrusel-contenedor">
-                <img src="image/banner/banner1.jpg" alt="banner1">
-                <img src="image/banner/banner2.jpg" alt="banner2">
-                <img src="image/banner/banner3.jpg" alt="banner3">
-                <img src="image/banner/banner4.png" alt="banner4">
-            </div>
-        </div>
-
+<!-- CONTENIDO -->
     <main>
-        <section class="productos-destacados">
-            <h2>Productos Destacados</h2>
-            <br>
-            <div class="productos-grid" id="productosGrid">
-                <!-- Los productos se insertan aquí con JavaScript -->
-            </div>
+        <section id="detalleProducto">
+            <!-- Aquí se inserta el detalle dinámico -->
         </section>
     </main>
-    
-    <!-- FOOTER -->
+
+<!-- FOOTER -->
     <footer>
         <div class="footer-container">
             <div class="footer-section">
@@ -122,12 +110,39 @@
             </div>
         </div>
     </footer>
+    <!-- FIN FOOTER -->
 
     <script src="js/Home.js"></script>
-    <script src="js/todos_productos.js"></script>
     <script src="js/render_productos.js"></script>
     <script src="js/CarritoCompras.js"></script>
-    
-    
+
+<!-- JS -->
+<script src="js/todos_productos.js"></script>
+<script>
+  // 1. Obtener el id desde la URL
+const params = new URLSearchParams(window.location.search);
+const id = parseInt(params.get("id"));
+
+  // 2. Buscar producto en la lista
+const producto = productos.find(p => p.id === id);
+
+  // 3. Renderizar en el contenedor
+const detalle = document.getElementById("detalleProducto");
+if (producto) {
+    detalle.innerHTML = `
+    <h2>${producto.nombre}</h2>
+    <img src="${producto.imagen}" alt="${producto.nombre}">
+    <p><strong>Marca:</strong> ${producto.marca}</p>
+    <p><strong>Modelo:</strong> ${producto.modelo}</p>
+    <p><strong>Precio:</strong> $${producto.precio.toLocaleString("es-CL")}</p>
+    <p><strong>Descripción:</strong> ${producto.descripcion}</p>
+    <button onclick="history.back()">Volver</button>
+    `;
+} else {
+    detalle.innerHTML = "<p>Producto no encontrado.</p>";
+}
+</script>
+
 </body>
 </html>
+

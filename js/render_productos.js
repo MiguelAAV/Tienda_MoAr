@@ -7,26 +7,20 @@ const productosGrid = document.getElementById("productosGrid");
 // Filtrar productos según la página
 let productosFiltrados = [];
 
-// Si es ACCESORIOS.html => mostrar todos los accesorios (sin importar marca)
+// Si es ACCESORIOS.html => mostrar todos los accesorios
 if (pagina === "ACCESORIOS") {
     productosFiltrados = productos.filter(p => p.categoria === "accesorios");
 }
-
 // Si es HOME.html => mostrar 1 producto de cada marca
 else if (pagina === "HOME") {
-    const marcasUnicas = new Set(productos.map(p => p.marca)); // todas las marcas
+    const marcasUnicas = new Set(productos.map(p => p.marca));
     productosFiltrados = [];
-
     marcasUnicas.forEach(marca => {
         const prod = productos.find(p => p.marca === marca && p.categoria === "smartphones");
-        if (prod) {
-            productosFiltrados.push(prod); // agrega solo el primer producto encontrado de esa marca
-        }
+        if (prod) productosFiltrados.push(prod);
     });
 }
-
-
-// En caso contrario => es una página de marca (Apple, Samsung, etc.)
+// En caso contrario => es una página de marca (Apple, Samsung, Motorola, etc.)
 else {
     productosFiltrados = productos.filter(
         p => p.marca === pagina && p.categoria === "smartphones"
@@ -46,8 +40,10 @@ function mostrarProductos(lista) {
         const card = document.createElement("div");
         card.classList.add("producto-card");
         card.innerHTML = `
-            <img src="${prod.imagen}" alt="${prod.nombre}">
-            <h3>${prod.nombre}</h3>
+            <a href="descripcion_producto.html?id=${prod.id}">
+                <img src="${prod.imagen}" alt="${prod.nombre}">
+                <h3>${prod.nombre}</h3>
+            </a>
             <p class="precio">$${prod.precio.toLocaleString("es-CL")}</p>
             <button onclick="agregarAlCarrito(${prod.id})">Agregar al carrito</button>
         `;
@@ -58,7 +54,6 @@ function mostrarProductos(lista) {
 // Función para agregar al carrito
 function agregarAlCarrito(id) {
     const producto = productos.find(p => p.id === id);
-
     const existe = carrito.find(p => p.id === id);
 
     if (existe) {
@@ -69,14 +64,9 @@ function agregarAlCarrito(id) {
 
     guardarCarrito();
     actualizarContadorCarrito();
-    mostrarCarrito?.(); // Llama a mostrarCarrito solo si existe (carrito.js)
+    mostrarCarrito?.();
     alert(`${producto.nombre} agregado al carrito`);
 }
-
-// Renderizar al cargar la página
-document.addEventListener("DOMContentLoaded", () => {
-    mostrarProductos(productosFiltrados);
-    actualizarContadorCarrito();
 
 // === Función para actualizar el contador del carrito ===
 function actualizarContadorCarrito() {
@@ -88,4 +78,9 @@ function actualizarContadorCarrito() {
     }
 }
 
+// Renderizar al cargar la página
+document.addEventListener("DOMContentLoaded", () => {
+    mostrarProductos(productosFiltrados);
+    actualizarContadorCarrito();
 });
+
