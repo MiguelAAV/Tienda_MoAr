@@ -183,7 +183,7 @@ nav ul li a:hover {
   padding: 10px 15px;         /* espacio interno */
   border-radius: 10px;         /* bordes redondeados */
   cursor: pointer;            /* cambia el cursor al pasar el mouse */
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .cart-icon {
@@ -356,5 +356,7 @@ footer {
         margin-left: 15px;
     }
     
+    /* --- Modal Login --- */
+
 
 }

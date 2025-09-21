@@ -6,6 +6,7 @@
     <title>MoAr</title>
     <!-- Llamada al archivo CSS externo -->
     <link rel="stylesheet" href="css/Home.css">
+    <link rel="stylesheet" href="css/Modal.css">
     <!-- Iconos (usando Font Awesome) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -15,9 +16,6 @@
         <div class="header-container">
             <a href="#" class="logo">Mo<span>Ar</span></a>
             <div class="menu-toggle" id="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
             </div>
             
             <nav class="menucelulares">
@@ -32,10 +30,11 @@
                             <li><a href="Honor.html">Honor</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Accesorios</a></li>
+                    <li><a href="Accesorios.html">Accesorios</a></li>
                     <li><a href="Nosotros.html">Nosotros</a></li>
                     <li><a href="Blogs.html">Blogs</a></li>
                     <li><a href="Contacto.html">Contacto</a></li>
+                    <li><a href="#" id="loginBtn">Login</a></li>
                 </ul>
             </nav>
             
@@ -45,7 +44,25 @@
             </div>
         </div>
     </header>
-    
+
+    <!-- Inicio Modal de Login -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form>
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" required>
+
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Entrar</button>
+            <p>¿No tienes cuenta? <a href="RegistroUsuario.html">Registrar nuevo usuario</a></p>
+        </form>
+    </div>
+    </div>
+    <!-- Modal de Login Fin-->
 
 
     <!-- MAIN CONTENT -->
@@ -61,6 +78,7 @@
         <main>
             <section class="productos-destacados">
                 <h2>Productos Destacados</h2>
+                <br>
                 <div class="productos-grid">
                     <div class="producto">
                         <img src="image/productos/honor/Honor 400 Lite 256 GB Negro + Choice X7 Lite/gs-gs-honor_-_400_lite_black10.jpg" alt="Producto 1">
@@ -123,6 +141,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/Home.js"></script>
     
 </body>
 </html>

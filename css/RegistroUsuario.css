@@ -1,0 +1,82 @@
+/* Estilos del contenedor del formulario */
+.registro-container {
+    max-width: 450px;
+    margin: 50px auto;
+    background: #f5f5f5;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Título */
+.registro-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 22px;
+}
+
+/* Etiquetas */
+.registro-container label {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Inputs y selects */
+.registro-container input,
+.registro-container select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border 0.2s ease-in-out;
+}
+
+.registro-container input:focus,
+.registro-container select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Fila de selectores (region/comuna) */
+.registro-container .form-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.registro-container .form-row select {
+    flex: 1;
+}
+
+/* Botón registrar */
+.registro-container button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.registro-container button:hover {
+    background: #0056b3;
+}
+
+/* Mensajes de error */
+.registro-container .error {
+    color: red;
+    font-size: 13px;
+    margin-top: 12px;
+    text-align: center;
+}

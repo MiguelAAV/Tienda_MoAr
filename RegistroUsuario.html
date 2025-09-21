@@ -1,23 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros</title>
-
+    <title>Registro_de_Usuario</title>
+    <link rel="stylesheet" href="css/RegistroUsuario.css">
     <link rel="stylesheet" href="css/Home.css">
-    <link rel="stylesheet" href="css/Nosotros.css">
+    <link rel="stylesheet" href="css/Modal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/modal.css">
 </head>
 <body>
+
+    <!-- HEADER -->
     <header>
         <div class="header-container">
             <a href="#" class="logo">Mo<span>Ar</span></a>
             <div class="menu-toggle" id="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
             </div>
             
             <nav class="menucelulares">
@@ -26,10 +24,10 @@
                     <li><a href="#">Celulares</a>
                         <ul class="submenucelulares">
                             <li><a href="Apple.html">Apple</a></li>
-                            <li><a href="samsung.html">Samsung</a></li>
-                            <li><a href="xiaomi.html">Xiaomi</a></li>
+                            <li><a href="Samsung.html">Samsung</a></li>
+                            <li><a href="Xiaomi.html">Xiaomi</a></li>
                             <li><a href="Motorola.html">Motorola</a></li>
-                            <li><a href="honor.html">Honor</a></li>
+                            <li><a href="Honor.html">Honor</a></li>
                         </ul>
                     </li>
                     <li><a href="Accesorios.html">Accesorios</a></li>
@@ -48,7 +46,7 @@
     </header>
 
     <!-- Inicio Modal de Login -->
-    <div id="loginModal" class="modal">
+        <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Iniciar Sesión</h2>
@@ -64,32 +62,63 @@
         </form>
     </div>
     </div>
-    <!-- Modal de Login Fin-->
+    <!-- Fin Modal de Login -->
 
-    <main>
-        <section class="nosotros">
-            <h2>Sobre Nosotros</h2>
-            <br>   
-            <br>
-            <p>Bienvenido a MoAr, tu tienda en línea de confianza para productos electrónicos de alta calidad. Nos apasiona ofrecerte lo mejor en tecnología y accesorios.</p>
-            <div class="imagen-nosotros">
-                <img src="image/blogs/cellphones-5507342_1280.jpg" alt="nosotros">
+    <div class="registro-container">
+        <h2>Registro de usuario</h2>
+        <form id="registroForm">
+            <label>Nombre Completo</label>
+            <input type="text" id="nombre" maxlength="100" required>
+
+            <label>Correo</label>
+            <input type="email" id="correo" maxlength="100" required>
+
+            <label>Confirmar Correo</label>
+            <input type="email" id="confirmarCorreo" maxlength="100" required>
+
+            <label>Contraseña</label>
+            <input type="password" id="contrasena" minlength="4" maxlength="10" required>
+
+            <label>Confirmar Contraseña</label>
+            <input type="password" id="confirmarContrasena" minlength="4" maxlength="10" required>
+
+            <label>Teléfono (opcional)</label>
+            <input type="tel" id="telefono">
+
+            <label>Dirección</label>
+            <input type="text" id="direccion">
+
+            <div class="form-row">
+                <select id="region" required>
+                    <option value="">Región</option>
+                    <option>Región Metropolitana de Santiago</option>
+                    <option>Región de la Araucanía</option>
+                    <option>Región de Ñuble</option>
+                </select>
+
+                <select id="comuna" required>
+                    <option value="">Comuna</option>
+                    <option>Linares</option>
+                    <option>Longaví</option>
+                    <option>Concepción</option>
+                </select>
             </div>
-            <p><b>En MoAr</b>, nos esforzamos por brindarte una experiencia de compra excepcional, con un catálogo cuidadosamente seleccionado y un servicio al cliente dedicado.
-            Contamos con una amplia gama de productos. Marcas reconocidas como: Apple, Samsung, Xiaomi, Motorola y muchas más.
-            Nuestra misión es hacer que la tecnología sea accesible para todos, ofreciendo productos innovadores a precios competitivos.
-            Valoramos la confianza de nuestros clientes y nos comprometemos a superar sus expectativas en cada compra.
-            Gracias por elegirnos. ¡Esperamos que disfrutes de tu experiencia de compra con nosotros!</p>
-        </section>
-    </main>
 
+            <button type="submit">Registrar</button>
+            <p id="errorMsg" class="error"></p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- FOOTER -->
     <footer>
         <div class="footer-container">
             <div class="footer-section">
                 <h3>Tienda MoAr</h3>
                 <p>Tu destino para compras online con los mejores productos y precios.</p>
             </div>
-
+            
             <div class="footer-section">
                 <h3>Suscríbete a nuestras novedades</h3>
                 <p>Recibe ofertas exclusivas y mantente informado de nuevos productos.</p>
@@ -98,7 +127,7 @@
                     <button>Suscribir</button>
                 </div>
             </div>
-
+            
             <div class="footer-section">
                 <h3>Medios de pago</h3>
                 <p>Aceptamos las tarjetas y métodos de pago:</p>
@@ -109,7 +138,7 @@
                     <span class="payment-method">Mercado Pago</span>
                 </div>
             </div>
-
+            
             <div class="copyright">
                 <p>&copy;2025 MoAr - Todos los derechos reservados</p>
             </div>
