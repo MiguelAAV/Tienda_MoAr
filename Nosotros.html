@@ -40,10 +40,14 @@
                 </ul>
             </nav>
             
+            <!-- Inicio carrito de compras -->
             <div class="cart-icon">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-count">0</span>
+                <a href="CarritoCompras.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
             </div>
+            <!-- Fin carrito de compras -->
         </div>
     </header>
 
@@ -67,9 +71,17 @@
     <!-- Modal de Login Fin-->
 
     <main>
+        <section class="productos_catalogo">
+            <div class="productos-grid" id="productosGrid">
+            <!-- Los productos se cargarán aquí dinámicamente -->
+            </div>
+        </section>
+    </main>
+
+    <main>
         <section class="nosotros">
             <h2>Sobre Nosotros</h2>
-            <br>   
+            <br>
             <br>
             <p>Bienvenido a MoAr, tu tienda en línea de confianza para productos electrónicos de alta calidad. Nos apasiona ofrecerte lo mejor en tecnología y accesorios.</p>
             <div class="imagen-nosotros">
@@ -117,6 +129,9 @@
     </footer>
 
     <script src="js/Home.js"></script>
+    <script src="js/CarritoCompras.js"></script>
+    <script src="js/todos_productos.js"></script>
+    <script src="js/render_productos.js"></script>
 
 </body>
 </html>

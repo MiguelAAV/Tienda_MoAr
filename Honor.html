@@ -40,10 +40,14 @@
                 </ul>
             </nav>
             
+            <!-- Inicio carrito de compras -->
             <div class="cart-icon">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-count">0</span>
+                <a href="CarritoCompras.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
             </div>
+            <!-- Fin carrito de compras -->
         </div>
     </header>
 
@@ -73,60 +77,8 @@
         <main>
             <section class="productos_catalogo"> 
                 <h2><u>Productos Honor</u></h2>
-                <div class="productos-grid_2">
-                    <div class="producto_marcas">
-                        <img src="image/productos/honor/Honor X9C Smart 256 GB Celeste/honor_-_x9c_smart_1.jpg" alt="Producto 1">
-                        <h2>HONOR</h2>
-                        <h3>Honor X9C Smart 256 GB Celeste</h3>
-                        <P>Precio</P>
-                        <p>$189.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/honor/Honor X6B 256 GB Verde/honor_-_x6b_5g_green_1.jpg" alt="Producto 2">
-                        <h2>HONOR</h2>
-                        <h3>Honor X6B 256 GB Verde</h3>
-                        <P>Precio</P>
-                        <p>$139.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/honor/Honor X6B 256 GB Black/honor_-_x6b_5g_black_2_2.jpg" alt="Producto 3">
-                        <h2>HONOR</h2>
-                        <h3>Honor X6B 256 GB Black</h3>
-                        <P>Precio</P>
-                        <p>$139.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/honor/Honor Magic 7 Lite 512GB Pruple/honor_-_magic7_lite_purple_1.jpg" alt="Producto 4">
-                        <h2>HONOR</h2>
-                        <h3>Honor Magic 7 Lite 512GB Purple</h3>
-                        <P>Precio</P>
-                        <p>$519.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/honor/Honor Magic 7 Lite 512GB Negro/honor_-_magic7_lite_black_7.jpg" alt="Producto 5">
-                        <h2>HONOR</h2>
-                        <h3>Honor Magic 7 Lite 512GB Negro</h3>
-                        <P>Precio</P>
-                        <p>$519.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/honor/Honor 400 Lite 256 GB Negro + Choice X7 Lite/gs-gs-honor_-_400_lite_black10.jpg" alt="Producto 5">
-                        <h2>HONOR</h2>
-                        <h3>Honor 400 Lite 256 GB Negro + Choice X7 Lite</h3>
-                        <P>Precio</P>
-                        <p>$299.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
+                <div class="productos-grid" id="productosGrid">
+                    <!-- Los productos se cargarán aquí dinámicamente -->
                 </div>
             </section>
         </main>
@@ -165,6 +117,9 @@
     </footer>
 
     <script src="js/Home.js"></script>
+    <script src="js/todos_productos.js"></script>
+    <script src="js/render_productos.js"></script>
+    <script src="js/CarritoCompras.js"></script>
     
 </body>
 </html>

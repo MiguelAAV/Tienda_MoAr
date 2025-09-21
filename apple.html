@@ -40,14 +40,18 @@
                 </ul>
             </nav>
             
+            <!-- Inicio carrito de compras -->
             <div class="cart-icon">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-count">0</span>
+                <a href="CarritoCompras.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
             </div>
+            <!-- Fin carrito de compras -->
         </div>
     </header>
 
-        <!-- Inicio Modal de Login -->
+    <!-- Inicio Modal de Login -->
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -71,64 +75,12 @@
         <main>
             <section class="productos_catalogo">
                 <h2><u>Productos Apple</u></h2>
-                <div class="productos-grid_2">
-                    <div class="producto_marcas">
-                        <img src="image/productos/apple/iPhone 16 Azul-128GB/iphone_16_ultramarine_pdp_image_position_1__cles.jpg" alt="Producto 1">
-                        <h2>APPLE</h2>
-                        <h3>Apple iPhone 16 Azul - 128GB</h3>
-                        <P>Precio</P>
-                        <p>$953.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/apple/iPhone 16 Rosado-128GB/iphone_16_pink_pdp_image_position_1__cles_1.jpg" alt="Producto 1">
-                        <h2>APPLE</h2>
-                        <h3>Apple iPhone 16 Rosado- 128GB</h3>
-                        <P>Precio</P>
-                        <p>$923.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/apple/iPhone 16 Pro Max Desierto-256 GB/iphone_16_pro_max_desert_titanium_pdp_image_position_1__gens.jpg" alt="Producto 1">
-                        <h2>APPLE</h2>
-                        <h3>Apple iPhone 16 Pro Max Desierto - 256 GB</h3>
-                        <P>Precio</P>
-                        <p>$1.359.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/apple/iPhone 16e Black-128GB/iphone_16e_black_pdp_image_position_1__cles.jpg" alt="Producto 1">
-                        <h2>APPLE</h2>
-                        <h3>Apple iPhone 16e Black - 128GB</h3>
-                        <P>Precio</P>
-                        <p>$699.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-                    
-                    <div class="producto_marcas">
-                        <img src="image/productos/apple/iPhone 15 Azul-128GB/apple_iphone_13_5g-min_2.png" alt="Producto 1">
-                        <h2>APPLE</h2>
-                        <h3>Apple iPhone 15 Azul- 128GB</h3>
-                        <P>Precio</P>
-                        <p>$779.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/apple/iPhone 14 Medianoche-128GB/logo_okk_2.png" alt="Producto 1">
-                        <h2>APPLE</h2>
-                        <h3>Apple iPhone 14 Medianoche - 128GB</h3>
-                        <P>Precio</P>
-                        <p>$779.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-                    
+                <div class="productos-grid" id="productosGrid">
+                    <!-- Los productos se cargarán aquí dinámicamente -->
                 </div>
             </section>
         </main>
+    
     <!-- FOOTER -->
     <footer>
         <div class="footer-container">
@@ -162,7 +114,12 @@
             </div>
         </div>
     </footer>
+    <!-- FIN FOOTER -->
 
     <script src="js/Home.js"></script>
+    <script src="js/todos_productos.js"></script>
+    <script src="js/render_productos.js"></script>
+    <script src="js/CarritoCompras.js"></script>
+
 </body>
 </html>

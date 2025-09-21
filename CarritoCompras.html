@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>samsung</title>
-    <link rel="stylesheet" href="css/productos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/Home.css">
-    <link rel="stylesheet" href="css/modal.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrito de Compras</title>
+<link rel="stylesheet" href="css/Home.css">
+<link rel="stylesheet" href="css/CarritoCompras.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-        <header>
+    <!-- HEADER -->
+<header>
         <div class="header-container">
             <a href="#" class="logo">Mo<span>Ar</span></a>
             <div class="menu-toggle" id="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
             </div>
             
             <nav class="menucelulares">
@@ -29,7 +25,7 @@
                             <li><a href="Samsung.html">Samsung</a></li>
                             <li><a href="Xiaomi.html">Xiaomi</a></li>
                             <li><a href="Motorola.html">Motorola</a></li>
-                            <li><a href="honor.html">Honor</a></li>
+                            <li><a href="Honor.html">Honor</a></li>
                         </ul>
                     </li>
                     <li><a href="Accesorios.html">Accesorios</a></li>
@@ -49,41 +45,36 @@
             </div>
             <!-- Fin carrito de compras -->
         </div>
-        </header>
+</header>
 
-    <!-- Inicio Modal de Login -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Iniciar Sesión</h2>
-            <form>
-            <label for="usuario">Usuario</label>
-            <input type="text" id="usuario" required>
+<main>
+    <section id="carrito-container">
+        <h2>Tu Carrito</h2>
+        <table id="carritoTabla">
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="carritoBody">
+                <!-- Productos cargados por JS -->
+            </tbody>
+        </table>
 
-            <label for="password">Contraseña</label>
-            <input type="password" id="password" required>
-
-            <button type="submit">Entrar</button>
-            <p>¿No tienes cuenta? <a href="RegistroUsuario.html">Registrar nuevo usuario</a></p>
-        </form>
-    </div>
-    </div>
-    <!-- Modal de Login Fin-->
-
-        <div class="container2">
-            <img src="image/logo_marcas/mundo_samsung_desk.jpg" alt="logo_samsung">
+        <div id="total-container">
+            <h3>Total: $<span id="total">0</span></h3>
+            <button id="vaciarCarrito">Vaciar Carrito</button>
+            <button id="comprar">Finalizar Compra</button>
         </div>
+    </section>
+</main>
 
-        <main>
-            <section class="productos_catalogo"> 
-                <h2><u>Productos Samsung</u></h2>
-                <div class="productos-grid" id="productosGrid">
-                    <!-- Los productos se cargarán aquí dinámicamente -->
-                </div>
-            </section>
-        </main>
-        
-    <!-- FOOTER -->
+        <!-- FOOTER -->
     <footer>
         <div class="footer-container">
             <div class="footer-section">

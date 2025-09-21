@@ -40,10 +40,14 @@
                 </ul>
             </nav>
             
+            <!-- Inicio carrito de compras -->
             <div class="cart-icon">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-count">0</span>
+                <a href="CarritoCompras.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
             </div>
+            <!-- Fin carrito de compras -->
         </div>
     </header>
 
@@ -71,59 +75,15 @@
         </div>
 
         <main>
-            <section class="productos_catalogo"> 
+            <section class="productos_catalogo">
                 <h2><u>Productos Motorola</u></h2>
-                <div class="productos-grid_2">
-                    <div class="producto_marcas">
-                        <img src="image/productos/motorola/Motorola Edge 60 256 GB Verde/01-edge60_shamrock.jpg" alt="Producto 1">
-                        <h2>MOTOROLA</h2>
-                        <h3>Motorola Edge 30 Pro</h3>
-                        <P>Precio</P>
-                        <p>$459.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/motorola/Motorola Edge 60 Fusion 256 GB Azul/01-edge60fusion_slipstream.jpg" alt="Producto 1">
-                        <h2>MOTOROLA</h2>
-                        <h3>Motorola Edge 60 Fusion 256 GB</h3>
-                        <P>Precio</P>
-                        <p>$389.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/motorola/Motorola G35 128 GB Negro/01_motog35-5g_negro_.png" alt="Producto 1">
-                        <h2>MOTOROLA</h2>
-                        <h3>Motorola G35 128 GB Negro</h3>
-                        <P>Precio</P>
-                        <p>$159.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/motorola/Motorola G55 5G 256 GB Verde/motog55-5g__verde_04.png" alt="Producto 1">
-                        <h2>MOTOROLA</h2>
-                        <h3>Motorola G55 5G 256 GB Verde</h3>
-                        <P>Precio</P>
-                        <p>$229.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/motorola/Motorola G85 5G 256Gb - Azul/motog85_azul_01.png" alt="Producto 1">
-                        <h2>MOTOROLA</h2>
-                        <h3>Motorola G85 5G 256Gb - Azul</h3>
-                        <P>Precio</P>
-                        <p>$239.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    
-                    
+                <div class="productos-grid" id="productosGrid">
+                    <!-- Los productos se cargarán aquí dinámicamente -->
                 </div>
             </section>
         </main>
+
+
     <!-- FOOTER -->
     <footer>
         <div class="footer-container">
@@ -159,5 +119,8 @@
     </footer>
 
     <script src="js/Home.js"></script>
+    <script src="js/todos_productos.js"></script>
+    <script src="js/render_productos.js"></script>
+    <script src="js/CarritoCompras.js"></script>
 </body>
 </html>

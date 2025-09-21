@@ -40,10 +40,14 @@
                 </ul>
             </nav>
             
+            <!-- Inicio carrito de compras -->
             <div class="cart-icon">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-count">0</span>
+                <a href="CarritoCompras.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
             </div>
+            <!-- Fin carrito de compras -->
         </div>
     </header>
 
@@ -66,64 +70,19 @@
     </div>
     <!-- Modal de Login Fin-->
 
-        <div class="container2">
-            <img src="image/logo_marcas/mundo_xiaomi_desk.jpg" alt="logo_xiaomi">
-        </div>
+    <div class="container2">
+        <img src="image/logo_marcas/mundo_xiaomi_desk.jpg" alt="logo_xiaomi">
+    </div>
 
-        <main>
-            <section class="productos_catalogo"> 
-                <h2><u>Productos Xiaomi</u></h2>
-                <div class="productos-grid_2">
-                    <div class="producto_marcas">
-                        <img src="image/productos/xiaomi/Xiaomi Redmi Note 14 Pro+ 256GB/o16u-black-1200x1200-back_front_1.jpg" alt="Producto 1">
-                        <h2>XIAOMI</h2>
-                        <h3>Xiaomi Redmi Note 14 Pro+ 256GB</h3>
-                        <P>Precio</P>
-                        <p>$529.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
+    <main>
+        <section class="productos_catalogo"> 
+            <h2><u>Productos Xiaomi</u></h2>
+            <div class="productos-grid" id="productosGrid">
+                <!-- Los productos se cargarán aquí dinámicamente -->
+            </div>
+        </section>
+    </main>
 
-                    <div class="producto_marcas">
-                        <img src="image/productos/xiaomi/Xiaomi Redmi Note 14 Pro 256GB/o16_black_back_45_r_2.jpg" alt="Producto 1">
-                        <h2>XIAOMI</h2>
-                        <h3>Xiaomi Redmi Note 14 Pro 256GB</h3>
-                        <P>Precio</P>
-                        <p>$439.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/xiaomi/Xiaomi Redmi 14C - 256 GB/1_4_3.jpg" alt="Producto 1">
-                        <h2>XIAOMI</h2>
-                        <h3>Xiaomi Redmi 14C - 256 GB</h3>
-                        <P>Precio</P>
-                        <p>$189.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/xiaomi/Xiaomi 14T 512GB Black/gs-xiaomi_14t_black-_v_1_1.jpg" alt="Producto 1">
-                        <h2>XIAOMI</h2>
-                        <h3>Xiaomi 14T 512GB Black</h3>
-                        <P>Precio</P>
-                        <p>$569.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/xiaomi/Xiaomi Redmi 13C 5G - 256 GB/google_shopping_-xiaomi_redmi_13c_5g-_v_1_1_.jpg" alt="Producto 1">
-                        <h2>XIAOMI</h2>
-                        <h3>Xiaomi Redmi 13C 5G - 256 GB</h3>
-                        <P>Precio</P>
-                        <p>$219.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    
-                    
-                </div>
-            </section>
-        </main>
     <!-- FOOTER -->
     <footer>
         <div class="footer-container">
@@ -159,5 +118,8 @@
     </footer>
 
     <script src="js/Home.js"></script>
+    <script src="js/todos_productos.js"></script>
+    <script src="js/render_productos.js"></script>
+    <script src="js/CarritoCompras.js"></script>
 </body>
 </html>

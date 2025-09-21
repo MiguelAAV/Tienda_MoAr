@@ -186,6 +186,54 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
+/* Grid general */
+#productosGrid {
+    display: grid;
+    /*grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));columnas responsivas */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    gap: 20px; /* separación entre tarjetas */
+    padding: 20px;
+}
+
+/* Tarjeta de producto */
+.producto-card {
+    border: 2px solid #ddd; /* borde gris claro */
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Imagen */
+.producto-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Botón */
+.producto-card button {
+    background-color: #1721A9;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.producto-card button:hover {
+    background-color: #0f1975; /* azul más oscuro al pasar el mouse */
+}
+
 .cart-icon {
     position: relative;
     cursor: pointer;

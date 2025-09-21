@@ -12,7 +12,7 @@
 .registro-container h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: #1721A9;
     font-size: 22px;
 }
 
@@ -22,7 +22,7 @@
     margin-top: 12px;
     font-size: 14px;
     font-weight: bold;
-    color: #444;
+    color: #1721A9;
 }
 
 /* Inputs y selects */
@@ -39,7 +39,7 @@
 
 .registro-container input:focus,
 .registro-container select:focus {
-    border-color: #007bff;
+    border-color: #1721A9;
     outline: none;
 }
 
@@ -59,7 +59,7 @@
     margin-top: 20px;
     width: 100%;
     padding: 12px;
-    background: #007bff;
+    background: #1721A9;
     color: white;
     border: none;
     border-radius: 6px;
@@ -70,7 +70,7 @@
 }
 
 .registro-container button:hover {
-    background: #0056b3;
+    background: #1721A9;
 }
 
 /* Mensajes de error */

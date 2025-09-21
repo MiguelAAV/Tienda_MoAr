@@ -40,10 +40,14 @@
                 </ul>
             </nav>
             
+            <!-- Inicio carrito de compras -->
             <div class="cart-icon">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-count">0</span>
+                <a href="CarritoCompras.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
             </div>
+            <!-- Fin carrito de compras -->
         </div>
     </header>
 
@@ -70,78 +74,8 @@
         <main>
             <section class="productos_catalogo">
                 <h2><u>Accesorios y más...</u></h2>
-                <div class="productos-grid_2">
-                    <div class="producto_marcas">
-                        <img src="image/productos/accesorios/Apple AirPods 4/gs-airpods_4-_v_1.jpg" alt="Producto 1">
-                        <h2>APPLE</h2>
-                        <h3>Apple AirPods 4</h3>
-                        <P>Precio</P>
-                        <p>$199.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/accesorios/Apple AirTag/apple_airtag-1.jpg" alt="Producto 1">
-                        <h2>APPLE</h2>
-                        <h3>Apple AirTag</h3>
-                        <P>Precio</P>
-                        <p>$39.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/accesorios/Apple EarPods Lightning/airpods_lightihng_ok.png" alt="Producto 1">
-                        <h2>APPLE</h2>
-                        <h3>Apple EarPods Lightning</h3>
-                        <P>Precio</P>
-                        <p>$59.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/accesorios/Batería 10.000 mAh Redmi 22.5W Lite/bateria_xiaomi_10000_mah.png" alt="Producto 1">
-                        <h2>XIAOMI</h2>
-                        <h3>Batería 10.000 mAh Redmi 22.5W Lite</h3>
-                        <P>Precio</P>
-                        <p>$39.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/accesorios/Philips Audífonos Over-Ear TAH1205BK/audifonos_over_earok.png" alt="Producto 1">
-                        <h2>PHILIPS</h2>
-                        <h3>Audífonos Over-Ear TAH1205BK</h3>
-                        <P>Precio</P>
-                        <p>$59.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/accesorios/Tablet Galaxy S6 Lite (2024) 64GB + Lápiz + Funda/1tb06119_1.jpg" alt="Producto 1">
-                        <h2>SAMSUNG</h2>
-                        <h3>Tablet Galaxy S6 Lite (2024) 64GB + Lápiz + Funda</h3>
-                        <P>Precio</P>
-                        <p>$127.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/accesorios/Xiaomi Band 9 Active Negro/band_9_1.jpg" alt="Producto 1">
-                        <h2>XIAOMI</h2>
-                        <h3>Xiaomi Band 9 Active Negro</h3>
-                        <P>Precio</P>
-                        <p>$19.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-
-                    <div class="producto_marcas">
-                        <img src="image/productos/accesorios/Xiaomi Redmi Watch 5 Active/xiaomi_redmi_watch_5_active_3_ok.jpg" alt="Producto 1">
-                        <h2>XIAOMI</h2>
-                        <h3>Xiaomi Redmi Watch 5 Active</h3>
-                        <P>Precio</P>
-                        <p>$99.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
+                <div class="productos-grid" id="productosGrid">
+                    <!-- Los productos se cargarán aquí dinámicamente -->
 
                     
                     
@@ -183,5 +117,8 @@
     </footer>
 
     <script src="js/Home.js"></script>
+    <script src="js/todos_productos.js"></script>
+    <script src="js/render_productos.js"></script>
+    <script src="js/CarritoCompras.js"></script>
 </body>
 </html>

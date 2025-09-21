@@ -7,6 +7,7 @@
     <!-- Llamada al archivo CSS externo -->
     <link rel="stylesheet" href="css/Home.css">
     <link rel="stylesheet" href="css/Modal.css">
+    
     <!-- Iconos (usando Font Awesome) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -37,15 +38,18 @@
                     <li><a href="#" id="loginBtn">Login</a></li>
                 </ul>
             </nav>
-            
+            <!-- Inicio carrito de compras -->
             <div class="cart-icon">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-count">0</span>
+                <a href="CarritoCompras.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
             </div>
+            <!-- Fin carrito de compras -->
         </div>
     </header>
 
-    <!-- Inicio Modal de Login -->
+<!-- Inicio Modal de Login -->
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -79,31 +83,8 @@
             <section class="productos-destacados">
                 <h2>Productos Destacados</h2>
                 <br>
-                <div class="productos-grid">
-                    <div class="producto">
-                        <img src="image/productos/honor/Honor 400 Lite 256 GB Negro + Choice X7 Lite/gs-gs-honor_-_400_lite_black10.jpg" alt="Producto 1">
-                        <h3>Honor 400 Lite 256 GB Negro + Choice X7 Lite</h3>
-                        <p>$299.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-                    <div class="producto">
-                        <img src="image/productos/apple/iPhone 16 Pro Max Desierto-256 GB/iphone_16_pro_max_desert_titanium_pdp_image_position_1__gens.jpg" alt="Producto 2">
-                        <h3>iPhone 16 Pro Max Desierto-256 GB</h3>
-                        <p>$1.359.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-                    <div class="producto">
-                        <img src="image/productos/accesorios/Xiaomi Redmi Watch 5 Active/xiaomi_redmi_watch_5_active_2_ok.jpg" alt="Producto3">
-                        <h3>Xiaomi Redmi Watch 5 Active</h3>
-                        <p>$45.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
-                    <div class="producto">
-                        <img src="image/productos/accesorios/Apple AirPods 4/gs-airpods_4-_v_1.jpg" alt="Producto 4">
-                        <h3>Apple AirPods 4</h3>
-                        <p>$150.990</p>
-                        <button>Añadir al carrito</button>
-                    </div>
+                <div class="productos-grid" id="productosGrid">
+                    <!-- Los productos se insertan aquí con JavaScript -->
                 </div>
             </section>
 
@@ -143,6 +124,10 @@
     </footer>
 
     <script src="js/Home.js"></script>
+    <script src="js/todos_productos.js"></script>
+    <script src="js/render_productos.js"></script>
+    <script src="js/CarritoCompras.js"></script>
+    
     
 </body>
 </html>
