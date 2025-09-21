@@ -49,24 +49,29 @@
         </div>
     </header>
 
-<!-- Inicio Modal de Login -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Iniciar Sesión</h2>
-            <form>
-            <label for="usuario">Usuario</label>
-            <input type="text" id="usuario" required>
+    <!-- Inicio Modal de Login (reemplazar bloque existente) -->
+    <div id="loginModal" class="modal" style="display:none; align-items:center; justify-content:center;">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Iniciar Sesión</h2>
 
-            <label for="password">Contraseña</label>
-            <input type="password" id="password" required>
+        <form id="loginForm">
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" required>
 
-            <button type="submit">Entrar</button>
-            <p>¿No tienes cuenta? <a href="RegistroUsuario.html">Registrar nuevo usuario</a></p>
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" required>
+
+        <button type="submit">Entrar</button>
+        <p>¿No tienes cuenta? <a href="RegistroUsuario.html">Registrar nuevo usuario</a></p>
+
+        <!-- Mensaje de error (oculto hasta que se muestre) -->
+        <div id="loginError" style="display:none;color:#b00020;margin-top:10px;font-size:14px;"></div>
         </form>
     </div>
     </div>
     <!-- Modal de Login Fin-->
+
 
 
     <!-- MAIN CONTENT -->
