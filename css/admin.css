@@ -117,3 +117,57 @@ body {
 .product-card button.delete:hover {
     background-color: #c82333;
 }
+
+    /* Estilos para formulario interno de agregar usuario (dentro del jframe) */
+    .jframe-body .add-user-form {
+    display: grid;
+    gap:10px;
+    }
+    .jframe-body .add-user-form label {
+    font-size:13px;
+    color:#333;
+    margin-top:4px;
+    }
+    .jframe-body .add-user-form input {
+    padding:8px 10px;
+    border-radius:6px;
+    border:1px solid #ddd;
+    font-size:14px;
+    width:100%;
+    box-sizing:border-box;
+    }
+    .jframe-body .add-user-form input:focus {
+    outline: none;
+    box-shadow: 0 6px 18px rgba(99,102,241,0.08);
+    border-color: rgba(99,102,241,0.4);
+    }
+
+        /* Estilos para formulario interno de agregar usuario y producto (dentro del jframe) */
+    .jframe-body .add-user-form,
+    .jframe-body .add-product-form {
+    display: grid;
+    gap:10px;
+    }
+    .jframe-body .add-user-form label,
+    .jframe-body .add-product-form label {
+    font-size:13px;
+    color:#333;
+    margin-top:4px;
+    }
+    .jframe-body .add-user-form input,
+    .jframe-body .add-product-form input {
+    padding:8px 10px;
+    border-radius:6px;
+    border:1px solid #ddd;
+    font-size:14px;
+    width:100%;
+    box-sizing:border-box;
+    }
+    .jframe-body .add-user-form input:focus,
+    .jframe-body .add-product-form input:focus {
+    outline: none;
+    box-shadow: 0 6px 18px rgba(99,102,241,0.08);
+    border-color: rgba(99,102,241,0.4);
+    }
+
+
